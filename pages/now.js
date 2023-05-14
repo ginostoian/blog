@@ -77,34 +77,34 @@ export default function Now(currentlyReading) {
     return () => clearInterval(timer)
   }, [])
 
-  var ParthBirthDate = '2000-04-16'
-  var birthDate = new Date(ParthBirthDate)
+  var GinoStoianDate = '1995-05-18'
+  var birthDate = new Date(GinoStoianDate)
 
-  var ParthAge = year - birthDate.getFullYear()
+  var GinoAge = year - birthDate.getFullYear()
 
-  var ParthMonth = 0
-  if (month >= birthDate.getMonth()) ParthMonth = month - birthDate.getMonth()
+  var GinoMonth = 0
+  if (month >= birthDate.getMonth()) GinoMonth = month - birthDate.getMonth()
   else {
-    ParthAge--
-    ParthMonth = 12 + month - birthDate.getMonth()
+    GinoAge--
+    GinoMonth = 12 + month - birthDate.getMonth()
   }
 
-  var ParthDay = 0
-  if (date >= birthDate.getDate()) ParthDay = date - birthDate.getDate()
+  var GinoDay = 0
+  if (date >= birthDate.getDate()) GinoDay = date - birthDate.getDate()
   else {
-    ParthMonth--
-    ParthDay = 31 + date - birthDate.getDate()
-    if (ParthMonth < 0) {
-      ParthMonth = 11
-      ParthAge--
+    GinoMonth--
+    GinoDay = 31 + date - birthDate.getDate()
+    if (GinoMonth < 0) {
+      GinoMonth = 11
+      GinoAge--
     }
   }
 
   var age = {}
   age = {
-    years: ParthAge,
-    months: ParthMonth,
-    days: ParthDay,
+    years: GinoAge,
+    months: GinoMonth,
+    days: GinoDay,
   }
 
   var ageString = ''
@@ -141,12 +141,13 @@ export default function Now(currentlyReading) {
         <div>
           <div className="flex justify-between gap-5">
             <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
-              <span className="ml-2 font-semibold">Location:</span> <span>Ahmedabad, India</span>
+              <span className="ml-2 font-semibold">Location:</span>{' '}
+              <span>London, United Kingodm</span>
               <br />
               <span className="ml-2 font-semibold">Weather:</span>{' '}
               <span>
                 <a
-                  href="https://weather.com/en-GB/weather/today/l/f42d9f8baa19b4d8d5e034449faa703839993366f64551a56a2b530297075dc2"
+                  href="https://weather.com/en-GB/weather/today/l/ae8230efd4bc57fdf721a02c7eb2b88c56aa6e71d73666328e33af3ea2039032132e24ae91b6a07862c5091a9d95a4b8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline-offset-1 hover:underline"
@@ -213,28 +214,26 @@ export default function Now(currentlyReading) {
         {/* Work */}
         <div className="pb-4">
           <p>
-            I work as a Data Engineer at{' '}
+            I work as a Software Developer at{' '}
             <Link
-              href={'https://www.accenture.com/'}
+              href={'https://bhstudio.co.uk/'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
-              Accenture
+              Better Homes Studio
             </Link>
             .
           </p>
           <br />
+          <p>I work on building the web presence, automation of processes and marketing.</p>
+          <br />
           <p>
-            I work on building pipelines and automating the entire process using Scala and Gcloud.
+            I am also currently working on a tech startup in the construction industry. Planning to
+            launch by the end of 2023.
           </p>
           <br />
           <p>
-            I have been trying to shift my field from Data Engineering to Data Science. I have been
-            constantly applying for the same as well.
-          </p>
-          <br />
-          <p>
-            My location preference is Bangalore but I am open to shift to another place for a better
-            opportunity.
+            At the same time, my wife and I just had a baby, so we are juggling work with home life
+            (which is the best!).
           </p>
           <br />
           <p>
@@ -268,16 +267,6 @@ export default function Now(currentlyReading) {
             article is a great reason to start your blog.
           </p>
           <br />
-          <p>
-            I am also going to start applying for Masters in Data Science in August 2022 for intake
-            of Fall 2023. I hope to get a good university near the West Coast. I'll update this page
-            after I get my admits.
-          </p>
-          <br />
-          <p>
-            I recently started to draft a post about my new Obsidian worklfow, it will be a good
-            one!
-          </p>
         </div>
         <div className="mt-3 text-sm">
           For more examples of folks with /now pages, check out{' '}
